@@ -38,7 +38,9 @@ export default class News extends Component {
 
     this.setState({ loading: true });
 
-    const url = `${apiUrl}/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+    // const url = `${apiUrl}/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+    const url = `/.netlify/functions/fetchNews?page=${page}&pageSize=${pageSize}&category=${category}`;
+
     const response = await fetch(url);
     const parsedData = await response.json();
     console.log(parsedData)
