@@ -1,5 +1,5 @@
 export async function handler(event) {
-  const NEWS_API_KEY = process.env.NEWS_API_KEY;
+  const NEWS_API_KEY = '3e2ae3fab65b4ac2906464e92adc5d13';
 
   if (!NEWS_API_KEY) {
     return {
