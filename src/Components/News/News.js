@@ -30,8 +30,8 @@ export default class News extends Component {
   }
 
   async updateNews() {
-    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
-    const apiUrl = process.env.REACT_APP_API_URL; 
+    // const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+    // const apiUrl = process.env.REACT_APP_API_URL; 
     const { pageSize, category } = this.props;
     const { page } = this.state;
     console.log("Updating news..."+ page  + " " + category+ " "+ pageSize);
