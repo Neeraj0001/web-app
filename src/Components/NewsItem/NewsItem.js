@@ -22,7 +22,7 @@ export default class NewsItem extends Component {
         <div className="card-body d-flex flex-column">
           <h5 className="card-title title-clamp mb-2">{title || ' '}</h5>
           <p className="card-text description-clamp flex-grow-1">{description || ' '}</p>
-          <a href={url} target='_blank' className="btn btn-primary mt-auto">
+          <a href={url} target='_blank' rel="noreferrer" className="btn btn-primary mt-auto">
             Read More
           </a>
           <p className="card-text mt-3 text-center"><small className="text-muted">By Author: {author|| 'Unnown'}, On: {new Date(publishedAt).toDateString()} </small></p>
