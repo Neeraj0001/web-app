@@ -1,0 +1,15 @@
+.title-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2em; /* ensures space even if short title */
+}
+
+.description-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 3 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4em; /* ensures space even if short description */
+}
