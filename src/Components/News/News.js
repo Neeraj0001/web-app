@@ -16,6 +16,7 @@ export default class News extends Component {
     category: PropTypes.string
   };
 
+  
 
 
   constructor(props) {
@@ -29,13 +30,15 @@ export default class News extends Component {
   }
 
   async updateNews() {
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+    const apiUrl = process.env.REACT_APP_API_URL; 
     const { pageSize, category } = this.props;
     const { page } = this.state;
     console.log("Updating news..."+ page  + " " + category+ " "+ pageSize);
 
     this.setState({ loading: true });
 
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=3e2ae3fab65b4ac2906464e92adc5d13&page=${page}&pageSize=${pageSize}`;
+    const url = `${apiUrl}/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
     const response = await fetch(url);
     const parsedData = await response.json();
     console.log(parsedData)
